@@ -56,23 +56,23 @@ curl:  http://192.168.2.238:3001/workerActivateJob?name=your-robot-name-goes-her
 - Description: This curl will acknowledge the job is received and that the robot has started the job
 
 ### /workerLocation ###
-curl:  http://192.168.2.238:3001/workerLocation?name=your-robot-name-goes-here&location=source-or-desination-goes-here
+curl:  https://adaptive-goal-management.herokuapp.com/workerLocation?name=your-robot-name-goes-here&location=source-or-desination-goes-here
 - Function: MOVEWORKER
 - Description: This curl will update the location of the worker to be either at the source or destination workstation
 - Implementation: in the `location` field `source` is used to acknowledge worker is at the source workstation, `destination` is used to acknowlegde the worker is at the destination station
 
 ### /workerTakePart ###
-curl:  http://192.168.2.238:3001/workerTakePart?name=your-robot-name-goes-here
+curl:  https://adaptive-goal-management.herokuapp.com/workerTakePart?name=your-robot-name-goes-here
 - Function: TAKEPART
 - Description: This curl will acknowledge the worker has retrieved the part from the `source` workstation
 
 ### /workerLoadWorkstation ###
-curl:  http://192.168.2.238:3001/workerLoadWorkstation?name=your-robot-name-goes-here
+curl:  https://adaptive-goal-management.herokuapp.com/workerLoadWorkstation?name=your-robot-name-goes-here
 - Function: LOADPART
 - Description: This curl will acknowledge the worker has loaded the part into the `destination` workstation
 
 ### /workerArchiveJob ###
-curl:  http://192.168.2.238:3001/workerLoadWorkstation?name=your-robot-name-goes-here
+curl:  https://adaptive-goal-management.herokuapp.com/workerLoadWorkstation?name=your-robot-name-goes-here
 - Function: ARCHIVEJOB
 - Description: This curl will clear the worker job and signal it is ready for the next job (call NEXTJOB)
 
