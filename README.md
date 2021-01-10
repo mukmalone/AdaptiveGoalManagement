@@ -2,9 +2,9 @@
 
 ### Description ###
 
-This repository is the documentation, examples, issue tracking for an app I created called Adaptive Goal Management.
+This repository is the documentation, examples, issue tracking for a MVP app I created called Adaptive Goal Management.
 
-Adaptive Goal Managment is an app which acts a an adaptive goal execution system.  
+Adaptive Goal Managment is an app which acts as an adaptive goal execution system.  
 
 It is designed to keep robots and drones connected to the Internet busy!
 
