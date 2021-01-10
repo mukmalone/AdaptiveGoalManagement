@@ -1,7 +1,7 @@
 # API End Points #
 
 ### API Server URL ###
-https://adaptive-goal-management.herokuapp.com/CompletedScreen
+https://adaptive-goal-management.herokuapp.com
 - It is currently in beta and available for free use to open source developers and researchers.
 
 ### Response object ###
