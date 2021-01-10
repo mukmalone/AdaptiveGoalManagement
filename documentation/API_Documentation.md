@@ -1,8 +1,8 @@
 # API End Points #
 
 ### API Server URL ###
-http://192.168.2.238:3001/
-- API is under development and deployed locally.  It will be available for free use to open source developers in the upcoming future.
+https://adaptive-goal-management.herokuapp.com/CompletedScreen
+- It is currently in beta and available for free use to open source developers and researchers.
 
 ### Response object ###
 All endpoints return the same JSON object.  Depending on the request, some fields may just be their default value.
