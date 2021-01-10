@@ -17,7 +17,7 @@ The ROS service which implements the endpoints in ROS has the following server d
 - name: WebComm.srv
 - Request:
 > - string function //name of function you want to call(defined below)
-> - string name //name of the robot making the request
+> - string key //_id of the robot making the request
 > - string location //used when moving to source or destination locations
 ---
 - Response:
@@ -46,33 +46,33 @@ The ROS service which implements the endpoints in ROS has the following server d
 > - uint32 destOrientW //Destination workstation parking angle
 
 ### /workerGetNextJob ###
-curl: http://192.168.2.238:3001/workerGetNextJob?name=your-robot-name-goes-here
+curl: https://adaptive-goal-management.herokuapp.com/workerGetNextJob?key=your-robot-id-goes-here
 - Function: NEXTJOB
 - Description: This curl will check if there is an available job for the robot corresponding to the robot name.  If there is it will return the source and destination name and coordinates
 
 ### /workerActivateJob ###
-curl:  http://192.168.2.238:3001/workerActivateJob?name=your-robot-name-goes-here
+curl:  https://adaptive-goal-management.herokuapp.com/workerActivateJob?name=your-robot-id-goes-here
 - Function: ACTIVATEJOB
 - Description: This curl will acknowledge the job is received and that the robot has started the job
 
 ### /workerLocation ###
-curl:  https://adaptive-goal-management.herokuapp.com/workerLocation?name=your-robot-name-goes-here&location=source-or-desination-goes-here
+curl:  https://adaptive-goal-management.herokuapp.com/workerLocation?name=your-robot-id-goes-here&location=source-or-desination-goes-here
 - Function: MOVEWORKER
 - Description: This curl will update the location of the worker to be either at the source or destination workstation
 - Implementation: in the `location` field `source` is used to acknowledge worker is at the source workstation, `destination` is used to acknowlegde the worker is at the destination station
 
 ### /workerTakePart ###
-curl:  https://adaptive-goal-management.herokuapp.com/workerTakePart?name=your-robot-name-goes-here
+curl:  https://adaptive-goal-management.herokuapp.com/workerTakePart?name=your-id-name-goes-here
 - Function: TAKEPART
 - Description: This curl will acknowledge the worker has retrieved the part from the `source` workstation
 
 ### /workerLoadWorkstation ###
-curl:  https://adaptive-goal-management.herokuapp.com/workerLoadWorkstation?name=your-robot-name-goes-here
+curl:  https://adaptive-goal-management.herokuapp.com/workerLoadWorkstation?name=your-id-name-goes-here
 - Function: LOADPART
 - Description: This curl will acknowledge the worker has loaded the part into the `destination` workstation
 
 ### /workerArchiveJob ###
-curl:  https://adaptive-goal-management.herokuapp.com/workerLoadWorkstation?name=your-robot-name-goes-here
+curl:  https://adaptive-goal-management.herokuapp.com/workerLoadWorkstation?name=your-id-name-goes-here
 - Function: ARCHIVEJOB
 - Description: This curl will clear the worker job and signal it is ready for the next job (call NEXTJOB)
 
