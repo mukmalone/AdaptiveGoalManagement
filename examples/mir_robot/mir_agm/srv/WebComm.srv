@@ -1,0 +1,27 @@
+string function
+string key
+string location
+---
+uint32 status 
+string name
+string tools
+string program
+string poNum
+string partNumber
+string partSerialNumber
+string sourceName
+uint32 sourcePosX
+uint32 sourcePosY
+uint32 sourcePosZ
+uint32 sourceOrientX
+uint32 sourceOrientY
+uint32 sourceOrientZ
+uint32 sourceOrientW
+string destName
+uint32 destPosX
+uint32 destPosY
+uint32 destPosZ
+uint32 destOrientX
+uint32 destOrientY
+uint32 destOrientZ
+uint32 destOrientW
