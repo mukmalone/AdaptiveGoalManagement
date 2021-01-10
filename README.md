@@ -10,9 +10,9 @@ It is designed to keep robots and drones connected to the Internet busy!
 
 ### Where to find the app and documentation ###
 
-Website: https://adaptive-goal-management.herokuapp.com/
-Functional description: https://github.com/mukmalone/AdpativeGoalManagement/blob/master/documentation/Adaptive%20Goal%20Management-Overview.pdf
-API documentation: https://github.com/mukmalone/AdpativeGoalManagement/blob/master/documentation/API_Documentation.md
+- [Adaptive Goal Management Website](https://adaptive-goal-management.herokuapp.com/)
+- [Documentation describing what it does and how it works](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/documentation/Adaptive%20Goal%20Management-Overview.pdf)
+- [API documentation](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/documentation/API_Documentation.md)
 
 
 
