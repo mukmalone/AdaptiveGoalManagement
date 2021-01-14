@@ -4,18 +4,18 @@
 
 This repository is the documentation, examples, issue tracking for a MVP app I created called Adaptive Goal Management.
 
-Adaptive Goal Managment is an app which acts as an adaptive goal execution system.  
+Adaptive Goal Managment is an app which acts as a robot fleet manager based upon an adaptive goal execution system for robots and drones which are connected to the internet.  
 
-It is designed to keep robots and drones connected to the Internet busy!
+It is free to test and experiment with your robots and I am currently building out examples using ROS.
 
 ### Where to find the app and documentation ###
 
-- [Adaptive Goal Management Website](https://adaptive-goal-management.herokuapp.com/)
-- [Documentation describing what it does and how it works](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/documentation/Adaptive%20Goal%20Management-Overview.pdf)
-- [API documentation](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/documentation/API_Documentation.md)
+- [Adaptive Goal Management Website](https://adaptive-goal-management.herokuapp.com/): This is the website of the app. 
+- [Documentation describing what it does and how it works](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/documentation/Adaptive%20Goal%20Management-Overview.pdf): This is an overview of how the app works using a manufacturing example.
+- [API documentation](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/documentation/API_Documentation.md): This is the API documentation and the ROS service documentation which connects to the app.
 
 ### Quick start guide ###
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/ex2v6yrXj6A/0.jpg)](https://youtu.be/ex2v6yrXj6A "AGM Quick Start")
 
-
-
+### Examples ###
+In the examples folder there are examples of robots based upon ROS and simulations using the application.
