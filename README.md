@@ -23,7 +23,7 @@ It is free to test and experiment with your robots and I am currently building o
 ### Examples ###
 In the examples folder there are examples of robots based upon ROS and simulations using the application.
 
-#### [MIR Robot Example](https://github.com/mukmalone/AdpativeGoalManagement/tree/master/examples/mir_robot) ####
+#### [MIR Robot in ROS & AGM Fleet Manager Example](https://github.com/mukmalone/AdpativeGoalManagement/tree/master/examples/mir_robot) ####
 
 - Step 1: Clone the project to your catkin workspace
 - Step 2: `catkin_make`
