@@ -26,8 +26,9 @@
 
   <include file="$(find mir_navigation)/launch/start_planner.launch" >
     <arg name="map_file" value="$(find mir_gazebo)/maps/maze.yaml" />
-    <arg name="virtual_walls_map_file" value="$(find mir_gazebo)/maps/maze_virtual_walls.yaml" />
+
   </include>
+
 
   <arg name="rvizconfig" default="$(find mir_navigation)/rviz/navigation.rviz" />
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
