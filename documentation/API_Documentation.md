@@ -22,7 +22,7 @@ All endpoints return the same JSON object.  Depending on the request, some field
 `
 
 The ROS service which implements the endpoints in ROS has the following server definition:
-- name: WebComm.srv
+- name: [WebComm.srv](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/examples/mir_robot/mir_agm/srv/WebComm.srv)
 - Request:
 > - string function //name of function you want to call(defined below)
 > - string key //_id of the robot making the request
