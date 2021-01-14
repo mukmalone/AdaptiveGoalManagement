@@ -15,7 +15,7 @@ It is free to test and experiment with your robots and I am currently building o
 - [API documentation](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/documentation/API_Documentation.md): This is the API documentation and the ROS service documentation which connects to the app.
 
 ### Introduction ###
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/hbpWmQUFGMc/0.jpg)](https://youtu.be/hbpWmQUFGMc "AGM Quick Start")
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/hbpWmQUFGMc/0.jpg)](https://youtu.be/hbpWmQUFGMc "Robotic Adaptive Goal Managment - Introduction")
 
 ### Quick start guide ###
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/ex2v6yrXj6A/0.jpg)](https://youtu.be/ex2v6yrXj6A "AGM Quick Start")
