@@ -32,3 +32,5 @@ In the examples folder there are examples of robots based upon ROS and simulatio
 - > `<node name="agm_worker_node" pkg="mir_agm" type="agm_worker_node" args="YOUR_WORKER_KEY_HERE"/>`
 - Step 5: `roslaunch mir_agm mir_agm.launch`
 - Step 6: Activate routings
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/ErKl_EgNA28/0.jpg)](https://youtu.be/ErKl_EgNA28 "MIR Robot in ROS & Adaptive Goal Management Implementation")
