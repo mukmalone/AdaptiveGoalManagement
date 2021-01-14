@@ -27,6 +27,8 @@ In the examples folder there are examples of robots based upon ROS and simulatio
 
 - Step 1: Clone the project to your catkin workspace
 - Step 2: `catkin_make`
-- Step 3: `roslaunch mir_agm mir_agm.launch`
-- Step 4: Configure your AGM workspace (see [Quickstart](https://www.youtube.com/watch?v=ex2v6yrXj6A&feature=youtu.be))
-- Step 5: Activate routings
+- Step 3: Configure your AGM workspace with one worker (see [Quickstart](https://www.youtube.com/watch?v=ex2v6yrXj6A&feature=youtu.be))
+- Step 4: in `/mir_agm/launch/mir_agm.launch` modify the last node launched to have the arg equal to your Worker key:
+- > <node name="agm_worker_node" pkg="mir_agm" type="agm_worker_node" args="YOUR_WORKER_KEY_HERE"/>
+- Step 5: `roslaunch mir_agm mir_agm.launch`
+- Step 6: Activate routings
