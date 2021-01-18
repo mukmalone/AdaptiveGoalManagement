@@ -7,14 +7,24 @@ https://adaptive-goal-management.herokuapp.com
 ### Response object ###
 All endpoints return the same JSON object.  Depending on the request, some fields may just be their default value.
 
-`{
-    status: '0', name: '', sourceName: '', sourceX: '', sourceY: '', sourceW: '',
-    destinationName: '', destinationX: '', destinationY: '', destinationW: ''
-}
+`
+    {
+    status: '0', name: '',
+    tools: [''], program: [''],
+    poNum: '', partNumber: '', partSerialNumber: '',
+    sourceName: '',
+    sourcePosX: '-9999', sourcePosY: '-9999', sourcePosZ: '-9999',
+    sourceOrientX: '-9999', sourceOrientY: '-9999', sourceOrientZ: '-9999', sourceOrientW: '-9999',
+    destName: '',
+    destPosX: '-9999', destPosY: '-9999', destPosZ: '-9999',
+    destOrientX: '-9999', destOrientY: '-9999', destOrientZ: '-9999', destOrientW: '-9999'
+    }
 `
 
 The ROS service which implements the endpoints in ROS has the following server definition:
-- name: WebComm.srv
+- name: [WebComm.srv](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/examples/mir_robot/mir_agm/srv/WebComm.srv)
+- ROS service: [web_comm_server_node.cpp](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/examples/mir_robot/mir_agm/src/web_comm_server_node.cpp)
+- example of using service to work through a sequence: [agm_worker_node.cpp](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/examples/mir_robot/mir_agm/src/agm_worker_node.cpp)
 - Request:
 > - string function //name of function you want to call(defined below)
 > - string key //_id of the robot making the request
@@ -47,17 +57,17 @@ The ROS service which implements the endpoints in ROS has the following server d
 
 ### /workerGetNextJob ###
 curl: https://adaptive-goal-management.herokuapp.com/workerGetNextJob?key=your-robot-id-goes-here
-- Function: NEXTJOB
+- ROS Function: NEXTJOB
 - Description: This curl will check if there is an available job for the robot corresponding to the robot name.  If there is it will return the source and destination name and coordinates
 
 ### /workerActivateJob ###
 curl:  https://adaptive-goal-management.herokuapp.com/workerActivateJob?name=your-robot-id-goes-here
-- Function: ACTIVATEJOB
+- ROS Function: ACTIVATEJOB
 - Description: This curl will acknowledge the job is received and that the robot has started the job
 
 ### /workerLocation ###
 curl:  https://adaptive-goal-management.herokuapp.com/workerLocation?name=your-robot-id-goes-here&location=source-or-desination-goes-here
-- Function: MOVEWORKER
+- ROS Function: MOVEWORKER
 - Description: This curl will update the location of the worker to be either at the source or destination workstation
 - Implementation: in the `location` field `source` is used to acknowledge worker is at the source workstation, `destination` is used to acknowlegde the worker is at the destination station
 
@@ -68,12 +78,12 @@ curl:  https://adaptive-goal-management.herokuapp.com/workerTakePart?name=your-i
 
 ### /workerLoadWorkstation ###
 curl:  https://adaptive-goal-management.herokuapp.com/workerLoadWorkstation?name=your-id-name-goes-here
-- Function: LOADPART
+- ROS Function: LOADPART
 - Description: This curl will acknowledge the worker has loaded the part into the `destination` workstation
 
 ### /workerArchiveJob ###
 curl:  https://adaptive-goal-management.herokuapp.com/workerLoadWorkstation?name=your-id-name-goes-here
-- Function: ARCHIVEJOB
+- ROS Function: ARCHIVEJOB
 - Description: This curl will clear the worker job and signal it is ready for the next job (call NEXTJOB)
 
 
