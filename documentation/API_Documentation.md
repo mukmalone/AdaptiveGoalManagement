@@ -21,43 +21,9 @@ All endpoints return the same JSON object.  Depending on the request, some field
     }
 `
 
-The ROS service which implements the endpoints in ROS has the following server definition:
-- name: [WebComm.srv](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/examples/mir_robot/mir_agm/srv/WebComm.srv)
-- ROS service: [web_comm_server_node.cpp](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/examples/mir_robot/mir_agm/src/web_comm_server_node.cpp)
-- example of using service to work through a sequence: [agm_worker_node.cpp](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/examples/mir_robot/mir_agm/src/agm_worker_node.cpp)
-- Request:
-> - string function //name of function you want to call(defined below)
-> - string key //_id of the robot making the request
-> - string location //used when moving to source or destination locations
----
-- Response:
-> - uint32 status //status of the request.  PASS=1 Error Code is != 1
-> - string name  //returns the name of the robot, if there is an error this will be the error description
-> - string tools // returns the list of tools associated with the destination station
-> - string program // returns the list of programs associated with the destination station
-> - string poNum // returns the PO number of the part being run
-> - string partNumber // returns the part number of the part being run
-> - string partSerialNumber: // returns the serial number of the part being run
-> - string sourceName //Source Workstation name
-> - uint32 sourcePosX //Source workstation parking X location
-> - uint32 sourcePosY //Source workstation parking Y location
-> - uint32 sourcePosZ //Source workstation parking Z location
-> - uint32 sourceOrientX //Source workstation parking X angle
-> - uint32 sourceOrientY //Source workstation parking Y angle
-> - uint32 sourceOrientZ //Source workstation parking Z angle
-> - uint32 sourceOrientW //Source workstation parking angle
-> - string destinationName //Destination workstation name
-> - uint32 destPosX //Destination workstation parking X location
-> - uint32 destPosY //Destination workstation parking Y location
-> - uint32 destPosZ //Destination workstation parking Z location
-> - uint32 destOrientX //Destination workstation parking X angle
-> - uint32 destOrientY //Destination workstation parking Y angle
-> - uint32 destOrientZ //Destination workstation parking Z angle
-> - uint32 destOrientW //Destination workstation parking angle
-
 ### /workerGetNextJob ###
 curl: https://adaptive-goal-management.herokuapp.com/workerGetNextJob?key=your-robot-id-goes-here
-- ROS Function: NEXTJOB
+- ROS service Function call: NEXTJOB
 - Description: This curl will check if there is an available job for the robot corresponding to the robot name.  If there is it will return the source and destination name and coordinates
 
 ### /workerActivateJob ###
@@ -129,3 +95,38 @@ curl:  https://adaptive-goal-management.herokuapp.com/workerLoadWorkstation?name
 - 15002: Error with logic of archiving job
 - 15003: The worker needs a job to be activated and complete before archiving
 - 15004: The worker still has a job and needs to complete before archiving
+
+## ROS Customer Service Documentation ##
+The ROS service which implements the endpoints in ROS has the following server definition:
+- name: [WebComm.srv](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/examples/mir_robot/mir_agm/srv/WebComm.srv)
+- ROS service: [web_comm_server_node.cpp](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/examples/mir_robot/mir_agm/src/web_comm_server_node.cpp)
+- example of using service to work through a sequence: [agm_worker_node.cpp](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/examples/mir_robot/mir_agm/src/agm_worker_node.cpp)
+- Request:
+> - string function //name of function you want to call(defined below)
+> - string key //_id of the robot making the request
+> - string location //used when moving to source or destination locations
+---
+- Response:
+> - uint32 status //status of the request.  PASS=1 Error Code is != 1
+> - string name  //returns the name of the robot, if there is an error this will be the error description
+> - string tools // returns the list of tools associated with the destination station
+> - string program // returns the list of programs associated with the destination station
+> - string poNum // returns the PO number of the part being run
+> - string partNumber // returns the part number of the part being run
+> - string partSerialNumber: // returns the serial number of the part being run
+> - string sourceName //Source Workstation name
+> - uint32 sourcePosX //Source workstation parking X location
+> - uint32 sourcePosY //Source workstation parking Y location
+> - uint32 sourcePosZ //Source workstation parking Z location
+> - uint32 sourceOrientX //Source workstation parking X angle
+> - uint32 sourceOrientY //Source workstation parking Y angle
+> - uint32 sourceOrientZ //Source workstation parking Z angle
+> - uint32 sourceOrientW //Source workstation parking angle
+> - string destinationName //Destination workstation name
+> - uint32 destPosX //Destination workstation parking X location
+> - uint32 destPosY //Destination workstation parking Y location
+> - uint32 destPosZ //Destination workstation parking Z location
+> - uint32 destOrientX //Destination workstation parking X angle
+> - uint32 destOrientY //Destination workstation parking Y angle
+> - uint32 destOrientZ //Destination workstation parking Z angle
+> - uint32 destOrientW //Destination workstation parking angle
