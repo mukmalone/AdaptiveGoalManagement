@@ -24,7 +24,7 @@ All endpoints return the same JSON object.  Depending on the request, some field
 
 ### /workerGetNextJob ###
 curl: https://adaptive-goal-management.herokuapp.com/workerGetNextJob?key=your-robot-id-goes-here
-- ROS Service Function call: NEXTJOB
+- ROS Service Function: NEXTJOB
 - Description: This curl will check if there is an available job for the robot corresponding to the robot name.  If there is it will return the source and destination name and coordinates
 
 ### /workerActivateJob ###
