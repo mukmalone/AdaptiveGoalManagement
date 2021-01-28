@@ -2,7 +2,8 @@
 
 ### API Server URL ###
 https://adaptive-goal-management.herokuapp.com
-- It is currently in beta and available for free use to open source developers and researchers.
+- It is currently in beta and available for free use to open source developers and researchers;
+- There are no currently known limitations as to the number of workers, workstations and routings you can enable and it is designed to handle a high workload.
 
 ### Response object ###
 All endpoints return the same JSON object.  Depending on the request, some fields may just be their default value.
