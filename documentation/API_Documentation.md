@@ -97,7 +97,7 @@ curl:  https://adaptive-goal-management.herokuapp.com/workerLoadWorkstation?name
 - 15003: The worker needs a job to be activated and complete before archiving
 - 15004: The worker still has a job and needs to complete before archiving
 
-## ROS Customer Service Documentation ##
+## ROS Custom Service Documentation ##
 The ROS service which implements the endpoints in ROS has the following server definition:
 - name: [WebComm.srv](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/examples/mir_robot/mir_agm/srv/WebComm.srv)
 - ROS service: [web_comm_server_node.cpp](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/examples/mir_robot/mir_agm/src/web_comm_server_node.cpp)
