@@ -6,7 +6,7 @@ This repository is the documentation, examples, issue tracking for a MVP app I c
 
 Adaptive Goal Managment is an app which acts as a robot fleet manager based upon an adaptive goal execution system for robots and drones which are connected to the internet.  
 
-It is free to test and experiment with your robots and I am currently building out examples using ROS.
+It is free to test and experiment with your robots and create your own fleet of the hardest working robots!  I am currently building out examples using ROS that are also free to use.
 
 ### Where to find the app and documentation ###
 
