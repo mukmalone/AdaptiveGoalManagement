@@ -5,47 +5,30 @@
 
   <include file="$(find mir_gazebo)/launch/mir_empty_world.launch">
     <arg name="gui" value="$(arg gui)" />
-    <arg name="world_name" value="$(find mir_agm)/worlds/hospital.world"/>
+    <arg name="world_name" value="$(find mir_agm)/worlds/hospital-modified.world"/>
+    <arg name="robot_x"   value="5.0" />
+    <arg name="robot_y"   value="10.0" />
+    <arg name="robot_yaw" value="0.0" />
   </include>
-
-<!--
-  <include file="$(find mir_gazebo)/launch/includes/spawn_maze.launch.xml" />
--->
-
 
   <!-- Localization -->
-  <!-- roslaunch mir_navigation amcl.launch initial_pose_x:=10.0 initial_pose_y:=10.0 -->  
-  <!--
+
+   <!-- comment out below for mapping -->
+
   <include file="$(find mir_navigation)/launch/amcl.launch">
-    <arg name="initial_pose_x" value="10.0" />
-    <arg name="initial_pose_y" value="10.0" />
+    <arg name="initial_pose_x" value="0.0" />
+    <arg name="initial_pose_y" value="0.0" />
   </include> 
-  -->
 
-  <!-- Navigation -->
-  <!-- 
-    roslaunch mir_navigation start_planner.launch \
-    map_file:=$(rospack find mir_gazebo)/maps/maze.yaml \
-    virtual_walls_map_file:=$(rospack find mir_gazebo)/maps/maze_virtual_walls.yaml
-    rviz -d $(rospack find mir_navigation)/rviz/navigation.rviz
--->
-
-<!--
   <include file="$(find mir_navigation)/launch/start_planner.launch" >
-    <arg name="map_file" value="$(find mir_gazebo)/maps/maze.yaml" />
-
+    <arg name="map_file" value="$(find mir_agm)/maps/hospital_v3.yaml" />
   </include>
--->
 
-  <!--
   <arg name="rvizconfig" default="$(find mir_navigation)/rviz/navigation.rviz" />
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
 
-  
   <node name="web_comm_server_node" pkg="mir_agm" type="web_comm_server_node" />
 
   <node name="agm_worker_node" pkg="mir_agm" type="agm_worker_node" args="5ff761098859890024d3fc2b"/>
-  -->
-
 
 </launch>

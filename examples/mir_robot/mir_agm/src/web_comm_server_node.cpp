@@ -146,31 +146,31 @@ bool get_next_order(mir_agm::WebComm::Request &req,
                     break;
                 case 8:
                     //sourcePosX
-                    res.sourcePosX=stoi(temp);
+                    res.sourcePosX=stof(temp);
                     break;
                 case 9:
                     //sourcePosY
-                    res.sourcePosY=stoi(temp);
+                    res.sourcePosY=stof(temp);
                     break;
                 case 10:
                     //sourcePosZ
-                    res.sourcePosZ=stoi(temp);
+                    res.sourcePosZ=stof(temp);
                     break;
                 case 11:
                     //sourceOrientX
-                    res.sourceOrientX=stoi(temp);
+                    res.sourceOrientX=stof(temp);
                     break;
                 case 12:   
                     //sourceOrientY
-                    res.sourceOrientY=stoi(temp);        
+                    res.sourceOrientY=stof(temp);        
                     break;
                 case 13:   
                     //sourceOrientZ
-                    res.sourceOrientZ=stoi(temp);        
+                    res.sourceOrientZ=stof(temp);        
                     break;    
                 case 14:   
                     //sourceOrientW
-                    res.sourceOrientW=stoi(temp);        
+                    res.sourceOrientW=stof(temp);        
                     break;
                 case 15:
                     //destName
@@ -178,31 +178,31 @@ bool get_next_order(mir_agm::WebComm::Request &req,
                     break;
                 case 16:
                     //destPosX
-                    res.destPosX=stoi(temp);
+                    res.destPosX=stof(temp);
                     break;
                 case 17:
                     //destPosY
-                    res.destPosY=stoi(temp);
+                    res.destPosY=stof(temp);
                     break;
                 case 18:
                     //destPosZ
-                    res.destPosZ=stoi(temp);
+                    res.destPosZ=stof(temp);
                     break;
                 case 19:
                     //destOrientX
-                    res.destOrientX=stoi(temp);
+                    res.destOrientX=stof(temp);
                     break;
                 case 20:   
                     //destOrientY
-                    res.destOrientY=stoi(temp);        
+                    res.destOrientY=stof(temp);        
                     break;
                 case 21:   
                     //destOrientZ
-                    res.destOrientZ=stoi(temp);        
+                    res.destOrientZ=stof(temp);        
                     break;    
                 case 22:   
                     //destOrientW
-                    res.destOrientW=stoi(temp);        
+                    res.destOrientW=stof(temp);        
                     break;
                 default:
                     break;

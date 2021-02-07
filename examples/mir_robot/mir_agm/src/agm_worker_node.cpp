@@ -15,7 +15,7 @@ class Robot_Class {
     mir_agm::WebComm job;			
 
 		void agm_comm();
-    void move(int posX, int posY, int posZ, int orientX, int orientY, int orientZ, int orientW);
+    void move(float posX, float posY, float posZ, float orientX, float orientY, float orientZ, float orientW);
 };
 
 void Robot_Class::agm_comm()
@@ -25,7 +25,7 @@ void Robot_Class::agm_comm()
     agmClient.call(job);
 }
 
-void Robot_Class::move(int posX, int posY, int posZ, int orientX, int orientY, int orientZ, int orientW)
+void Robot_Class::move(float posX, float posY, float posZ, float orientX, float orientY, float orientZ, float orientW)
 {
   //tell the action client that we want to spin a thread by default
   MoveBaseClient ac("move_base", true);
@@ -84,8 +84,8 @@ int main(int argc, char** argv){
   //find next job
   robot.job.request.function = "START";
   //source coordinates
-  int sPosX, sPosY, sPosZ, sOrientX, sOrientY, sOrientZ, sOrientW;
-  int dPosX, dPosY, dPosZ, dOrientX, dOrientY, dOrientZ, dOrientW;
+  float sPosX, sPosY, sPosZ, sOrientX, sOrientY, sOrientZ, sOrientW;
+  float dPosX, dPosY, dPosZ, dOrientX, dOrientY, dOrientZ, dOrientW;
 
   //destination coordinates
 
