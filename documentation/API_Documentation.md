@@ -116,18 +116,18 @@ The ROS service which implements the endpoints in ROS has the following server d
 > - string partNumber // returns the part number of the part being run
 > - string partSerialNumber: // returns the serial number of the part being run
 > - string sourceName //Source Workstation name
-> - uint32 sourcePosX //Source workstation parking X location
-> - uint32 sourcePosY //Source workstation parking Y location
-> - uint32 sourcePosZ //Source workstation parking Z location
-> - uint32 sourceOrientX //Source workstation parking X angle
-> - uint32 sourceOrientY //Source workstation parking Y angle
-> - uint32 sourceOrientZ //Source workstation parking Z angle
-> - uint32 sourceOrientW //Source workstation parking angle
+> - float64 sourcePosX //Source workstation parking X location
+> - float64 sourcePosY //Source workstation parking Y location
+> - float64 sourcePosZ //Source workstation parking Z location
+> - float64 sourceOrientX //Source workstation parking X angle
+> - float64 sourceOrientY //Source workstation parking Y angle
+> - float64 sourceOrientZ //Source workstation parking Z angle
+> - float64 sourceOrientW //Source workstation parking angle
 > - string destinationName //Destination workstation name
-> - uint32 destPosX //Destination workstation parking X location
-> - uint32 destPosY //Destination workstation parking Y location
-> - uint32 destPosZ //Destination workstation parking Z location
-> - uint32 destOrientX //Destination workstation parking X angle
-> - uint32 destOrientY //Destination workstation parking Y angle
-> - uint32 destOrientZ //Destination workstation parking Z angle
-> - uint32 destOrientW //Destination workstation parking angle
+> - float64 destPosX //Destination workstation parking X location
+> - float64 destPosY //Destination workstation parking Y location
+> - float64 destPosZ //Destination workstation parking Z location
+> - float64 destOrientX //Destination workstation parking X angle
+> - float64 destOrientY //Destination workstation parking Y angle
+> - float64 destOrientZ //Destination workstation parking Z angle
+> - float64 destOrientW //Destination workstation parking angle
