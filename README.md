@@ -46,3 +46,5 @@ In the examples folder there are examples of robots based upon ROS and simulatio
 - Step 5: `roslaunch mir_agm mir_agm_hospital.launch`
 - Step 6: Activate routings you've created in AGM to sterilize the hospital setting.  You can use the path [creation ubuntu spreadsheet](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/documentation/path_building_v1.ods) to find coordinates of locations in the [hospital map](https://github.com/mukmalone/AdpativeGoalManagement/tree/master/examples/mir_robot/mir_agm/maps)
 
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/WQkUFjGvlpc/0.jpg)](https://youtu.be/WQkUFjGvlpc "ROS Hector Mapping using MIR in hospital setting")
+
