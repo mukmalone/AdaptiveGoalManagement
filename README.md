@@ -36,3 +36,13 @@ In the examples folder there are examples of robots based upon ROS and simulatio
 - Step 6: Activate routings
 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/ErKl_EgNA28/0.jpg)](https://youtu.be/ErKl_EgNA28 "MIR Robot in ROS & Adaptive Goal Management Implementation")
+
+### [MIR Robot in ROS Hospital Sterilization](https://github.com/mukmalone/AdpativeGoalManagement/tree/master/examples/mir_robot/mir_agm/launch) ###
+- Step 1: Clone the project to your catkin workspace
+- Step 2: `catkin_make`
+- Step 3: Configure your AGM workspace with one worker (see [Quickstart](https://www.youtube.com/watch?v=ex2v6yrXj6A&feature=youtu.be))
+- Step 4: in `/mir_agm/launch/mir_agm_hospital.launch` modify the last node launched to have the arg equal to your Worker key:
+- > `<node name="agm_worker_node" pkg="mir_agm" type="agm_worker_node" args="YOUR_WORKER_KEY_HERE"/>`
+- Step 5: `roslaunch mir_agm mir_agm_hospital.launch`
+- Step 6: Activate routings you've created in AGM to sterilize the hospital setting.  You can use the path [creation ubuntu spreadsheet](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/documentation/path_building_v1.ods) to find coordinates of locations in the [hospital map](https://github.com/mukmalone/AdpativeGoalManagement/tree/master/examples/mir_robot/mir_agm/maps)
+
