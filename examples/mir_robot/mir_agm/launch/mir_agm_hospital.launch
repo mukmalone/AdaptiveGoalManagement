@@ -26,7 +26,11 @@
   <arg name="rvizconfig" default="$(find mir_navigation)/rviz/navigation.rviz" />
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
 
+  <!--
+
   <node name="web_comm_server_node" pkg="mir_agm" type="web_comm_server_node" />
+  
+  -->
   
   <!--
 

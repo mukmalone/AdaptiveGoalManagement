@@ -130,7 +130,12 @@ int main(int argc, char** argv){
       robot.job.request.location = "source";
       cout<<sPosX<<" "<<sPosY<<" "<<sPosZ<<" "<<sOrientX<<" "<<sOrientY<<" "<<sOrientZ<<" "<<sOrientW<<endl;
       robot.move(sPosX, sPosY, sPosZ, sOrientX, sOrientY, sOrientZ, sOrientW);
-      robot.agm_comm();
+      if (robot.job.request.function == "ERROR")
+      {
+        cout<<"We have an error moving"<<endl;
+      } else {
+        robot.agm_comm();
+      }
     } else if (job=="MOVEWORKER" && status == 1){
       //either TAKEPART or LOADPART depending on location
       if (robot.job.request.location=="source"){
@@ -149,7 +154,12 @@ int main(int argc, char** argv){
       robot.job.request.location = "destination";
       cout<<dPosX<<" "<<dPosY<<" "<<dPosZ<<" "<<dOrientX<<" "<<dOrientY<<" "<<dOrientZ<<" "<<dOrientW<<endl;
       robot.move(dPosX, dPosY, dPosZ, dOrientX, dOrientY, dOrientZ, dOrientW);
-      robot.agm_comm();
+      if (robot.job.request.function == "ERROR")
+      {
+        cout<<"We have an error moving"<<endl;
+      } else {
+        robot.agm_comm();
+      }
     } else if (job=="LOADPART" && status == 1) {
       //archive job
       cout<<"Archiving job"<<endl;
