@@ -39,7 +39,7 @@ TebLocalPlannerROS:
   free_goal_vel: false                     # Allow the robot's velocity to be nonzero for planning purposes (the robot can arrive at the goal with max speed)
 
   # Obstacles
-  min_obstacle_dist: 0.08                   # Minimum desired separation from obstacles
+  min_obstacle_dist: 0.004                   # Minimum desired separation from obstacles
   inflation_dist: 0.1                      # Buffer zone around obstacles with non-zero penalty costs (should be larger than min_obstacle_dist in order to take effect)
   dynamic_obstacle_inflation_dist: 0.6     # Buffer zone around predicted locations of dynamic obstacles with non-zero penalty costs (should be larger than min_obstacle_dist in order to take effect)
   include_dynamic_obstacles: false         # Specify whether the movement of dynamic obstacles should be predicted by a constant velocity model (this also changes the homotopy class search). If false, all obstacles are considered to be static.
