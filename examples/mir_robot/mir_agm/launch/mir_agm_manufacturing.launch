@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Gazebo -->
+  <arg name="gui" default="true" />
+
+  <include file="$(find mir_gazebo)/launch/mir_empty_world.launch">
+    <arg name="gui" value="$(arg gui)" />
+    <arg name="world_name" value="$(find mir_agm)/worlds/sme-manufacturing.world"/>
+    <arg name="robot_x"   value="0.0" />
+    <arg name="robot_y"   value="0.0" />
+    <arg name="robot_yaw" value="0.0" />
+  </include>
+
+  <!-- Localization -->
+
+   <!-- comment out below for mapping -->
+
+  <include file="$(find mir_navigation)/launch/amcl.launch">
+    <arg name="initial_pose_x" value="0.0" />
+    <arg name="initial_pose_y" value="0.0" />
+  </include> 
+
+  <include file="$(find mir_navigation)/launch/start_planner.launch" >
+    <arg name="map_file" value="$(find mir_agm)/maps/sme_manufacturing_map.yaml" />
+  </include>
+
+  <arg name="rvizconfig" default="$(find mir_navigation)/rviz/navigation.rviz" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+
+  <!--
+
+  <node name="web_comm_server_node" pkg="mir_agm" type="web_comm_server_node" />
+  
+
+  <node name="agm_worker_node" pkg="mir_agm" type="agm_worker_node" args="604050198c8330002487c013"/>
+-->
+
+</launch>
