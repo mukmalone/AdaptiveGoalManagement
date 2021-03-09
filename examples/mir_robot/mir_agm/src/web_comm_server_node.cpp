@@ -63,6 +63,8 @@ bool get_next_order(mir_agm::WebComm::Request &req,
         }            
 
         url += "?key="+req.key+"&location="+req.location;
+
+        cout<<url<<endl;
         
         curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
