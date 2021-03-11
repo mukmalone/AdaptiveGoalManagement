@@ -1,6 +1,7 @@
 #include <ros/ros.h>
 #include <move_base_msgs/MoveBaseAction.h>
 #include <actionlib/client/simple_action_client.h>
+#include <nav_msgs/Odometry.h>
 #include <mir_agm/WebComm.h>
 #include <string>
 
@@ -9,13 +10,17 @@ using namespace std;
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
 
 class Robot_Class {
-	public:	
+   	
+  public:	
 		std::string key;
 		ros::NodeHandle n;	
-    mir_agm::WebComm job;			
+    mir_agm::WebComm job;		    
+    ros::Subscriber feedback;	
 
 		void agm_comm();
     void move(float posX, float posY, float posZ, float orientX, float orientY, float orientZ, float orientW);
+    //void feedbackCallback(const move_base_msgs::MoveBaseActionFeedback::ConstPtr& msg);
+    void feedbackCallback(const nav_msgs::Odometry::ConstPtr& msg);
 };
 
 void Robot_Class::agm_comm()
@@ -23,6 +28,10 @@ void Robot_Class::agm_comm()
 	ros::ServiceClient agmClient = n.serviceClient<mir_agm::WebComm>("/web_comm");
     job.request.key = key;
     agmClient.call(job);
+}
+//void Robot_Class::feedbackCallback(const move_base_msgs::MoveBaseActionFeedback::ConstPtr& msg) {
+void Robot_Class::feedbackCallback(const nav_msgs::Odometry::ConstPtr& msg) {
+  cout<<"please help me"<<endl;
 }
 
 void Robot_Class::move(float posX, float posY, float posZ, float orientX, float orientY, float orientZ, float orientW)
@@ -53,7 +62,25 @@ void Robot_Class::move(float posX, float posY, float posZ, float orientX, float 
   ROS_INFO("Sending goal");
   ac.sendGoal(goal);
 
-  ac.waitForResult();
+  //here I want to implement my own monitoring loop where I can give position feedback
+  
+  ros::Rate loop_rate(1);
+  actionlib::SimpleClientGoalState state = ac.getState();
+  
+  feedback = n.subscribe<nav_msgs::Odometry>("/odom_comb", 1000, &Robot_Class::feedbackCallback, this);
+  //feedback = n.subscribe<move_base_msgs::MoveBaseActionFeedback>("/move_base/feedback", 1000, &Robot_Class::feedbackCallback, this);
+
+  while(!state.isDone()) {
+    state = ac.getState();    
+    ROS_INFO("Action state: %s",state.toString().c_str());
+    loop_rate.sleep();
+  }
+
+  // Next steps:
+  // - subscribe to /move_base/feedback topic to get coordinates
+  // - build a message that will be sent back to the AGM server giving coordinates & status
+
+  //ac.waitForResult();
 
   if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
   {
