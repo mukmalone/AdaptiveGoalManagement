@@ -19,8 +19,7 @@ class Robot_Class {
 
 		void agm_comm();
     void move(float posX, float posY, float posZ, float orientX, float orientY, float orientZ, float orientW);
-    //void feedbackCallback(const move_base_msgs::MoveBaseActionFeedback::ConstPtr& msg);
-    void feedbackCallback(const nav_msgs::Odometry::ConstPtr& msg);
+    void feedbackCallback(const move_base_msgs::MoveBaseActionFeedback::ConstPtr& msg);    
 };
 
 void Robot_Class::agm_comm()
@@ -29,9 +28,8 @@ void Robot_Class::agm_comm()
     job.request.key = key;
     agmClient.call(job);
 }
-//void Robot_Class::feedbackCallback(const move_base_msgs::MoveBaseActionFeedback::ConstPtr& msg) {
-void Robot_Class::feedbackCallback(const nav_msgs::Odometry::ConstPtr& msg) {
-  cout<<"please help me"<<endl;
+void Robot_Class::feedbackCallback(const move_base_msgs::MoveBaseActionFeedback::ConstPtr& msg) {
+  cout<<*msg<<endl;
 }
 
 void Robot_Class::move(float posX, float posY, float posZ, float orientX, float orientY, float orientZ, float orientW)
@@ -67,12 +65,12 @@ void Robot_Class::move(float posX, float posY, float posZ, float orientX, float 
   ros::Rate loop_rate(1);
   actionlib::SimpleClientGoalState state = ac.getState();
   
-  feedback = n.subscribe<nav_msgs::Odometry>("/odom_comb", 1000, &Robot_Class::feedbackCallback, this);
-  //feedback = n.subscribe<move_base_msgs::MoveBaseActionFeedback>("/move_base/feedback", 1000, &Robot_Class::feedbackCallback, this);
+  feedback = n.subscribe<move_base_msgs::MoveBaseActionFeedback>("/move_base/feedback", 1000, &Robot_Class::feedbackCallback, this);
 
   while(!state.isDone()) {
     state = ac.getState();    
     ROS_INFO("Action state: %s",state.toString().c_str());
+    ros::spin();
     loop_rate.sleep();
   }
 
