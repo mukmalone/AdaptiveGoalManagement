@@ -29,13 +29,14 @@ In the examples folder there are examples of robots based upon ROS and simulatio
 
 - Step 1: Clone this project to your catkin workspace
 - Step 2: Clone https://github.com/mukmalone/agm_msgs to your catkin workspace
-- Step 3: `catkin_make --pkg agm_msgs`
-- Step 2: `catkin_make`
-- Step 3: Configure your AGM workspace with one worker (see [Quickstart](https://www.youtube.com/watch?v=ex2v6yrXj6A&feature=youtu.be))
-- Step 4: in `/mir_agm/launch/mir_agm.launch` modify the last node launched to have the arg equal to your Worker key:
-- > `<node name="agm_worker_node" pkg="mir_agm" type="agm_worker_node" args="YOUR_WORKER_KEY_HERE"/>`
-- Step 5: `roslaunch mir_agm mir_agm.launch`
-- Step 6: Activate routings
+- Step 3: Clone https://github.com/mukmalone/agm_comm to your catkin workspac
+- Step 4: `catkin_make --pkg agm_msgs`
+- Step 5: `catkin_make`
+- Step 6: Configure your AGM workspace with one worker (see [Quickstart](https://www.youtube.com/watch?v=ex2v6yrXj6A&feature=youtu.be))
+- Step 7: in `/mir_agm/launch/mir_agm.launch` modify the last node launched to have the arg equal to your Worker key:
+- > `<node name="agm_worker_node" pkg="agm_comm" type="agm_worker_node" args="YOUR_WORKER_KEY_HERE"/>`
+- Step 8: `roslaunch mir_agm mir_agm.launch`
+- Step 9: Activate routings
 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/ErKl_EgNA28/0.jpg)](https://youtu.be/ErKl_EgNA28 "MIR Robot in ROS & Adaptive Goal Management Implementation")
 
