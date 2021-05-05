@@ -27,7 +27,9 @@ In the examples folder there are examples of robots based upon ROS and simulatio
 
 #### [MIR Robot in ROS & AGM Fleet Manager Example](https://github.com/mukmalone/AdpativeGoalManagement/tree/master/examples/mir_robot) ####
 
-- Step 1: Clone the project to your catkin workspace
+- Step 1: Clone this project to your catkin workspace
+- Step 2: Clone https://github.com/mukmalone/agm_msgs to your catkin workspace
+- Step 3: `catkin_make --pkg agm_msgs`
 - Step 2: `catkin_make`
 - Step 3: Configure your AGM workspace with one worker (see [Quickstart](https://www.youtube.com/watch?v=ex2v6yrXj6A&feature=youtu.be))
 - Step 4: in `/mir_agm/launch/mir_agm.launch` modify the last node launched to have the arg equal to your Worker key:
