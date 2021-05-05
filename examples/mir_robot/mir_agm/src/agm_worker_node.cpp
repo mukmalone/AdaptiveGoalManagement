@@ -67,18 +67,20 @@ void Robot_Class::move(float posX, float posY, float posZ, float orientX, float 
   
   feedback = n.subscribe<move_base_msgs::MoveBaseActionFeedback>("/move_base/feedback", 1000, &Robot_Class::feedbackCallback, this);
 
+  /*
   while(!state.isDone()) {
     state = ac.getState();    
     ROS_INFO("Action state: %s",state.toString().c_str());
     ros::spin();
     loop_rate.sleep();
   }
+  */
 
   // Next steps:
   // - subscribe to /move_base/feedback topic to get coordinates
   // - build a message that will be sent back to the AGM server giving coordinates & status
 
-  //ac.waitForResult();
+  ac.waitForResult();
 
   if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
   {
