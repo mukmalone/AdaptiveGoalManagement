@@ -2,7 +2,7 @@
 #include <move_base_msgs/MoveBaseAction.h>
 #include <actionlib/client/simple_action_client.h>
 #include <nav_msgs/Odometry.h>
-#include <mir_agm/WebComm.h>
+#include <agm_msgs/WebComm.h>
 #include <string>
 
 using namespace std;
@@ -14,7 +14,7 @@ class Robot_Class {
   public:	
 		std::string key;
 		ros::NodeHandle n;	
-    mir_agm::WebComm job;		    
+    agm_msgs::WebComm job;		    
     ros::Subscriber feedback;	
 
 		void agm_comm();
@@ -24,7 +24,7 @@ class Robot_Class {
 
 void Robot_Class::agm_comm()
 {
-	ros::ServiceClient agmClient = n.serviceClient<mir_agm::WebComm>("/web_comm");
+	ros::ServiceClient agmClient = n.serviceClient<agm_msgs::WebComm>("/web_comm");
     job.request.key = key;
     agmClient.call(job);
 }

@@ -5,7 +5,7 @@
 // manufacturing step for the MIR delivery robot to fullfill
 
 #include <ros/ros.h>
-#include <mir_agm/WebComm.h>
+#include <agm_msgs/WebComm.h>
 #include <curl/curl.h>
 #include <string>
 #include <iostream>
@@ -31,8 +31,8 @@ void decomposeRes(string const &str, const char delim,
     }
 }
 
-bool get_next_order(mir_agm::WebComm::Request &req,
-                    mir_agm::WebComm::Response &res)
+bool get_next_order(agm_msgs::WebComm::Request &req,
+                    agm_msgs::WebComm::Response &res)
 {
     CURL *curl;
     CURLcode res_curl;
