@@ -28,13 +28,13 @@
 
   <!--
 
-  <node name="web_comm_server_node" pkg="mir_agm" type="web_comm_server_node" />
+  <node name="web_comm_server_node" pkg="agm_comm" type="web_comm_server_node" />
   
   -->
   
   <!--
 
-  <node name="agm_worker_node" pkg="mir_agm" type="agm_worker_node" args="5ff761098859890024d3fc2b"/>
+  <node name="agm_worker_node" pkg="agm_comm" type="agm_worker_node" args="5ff761098859890024d3fc2b"/>
 
   -->
 

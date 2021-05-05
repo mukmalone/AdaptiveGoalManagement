@@ -33,12 +33,3 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(simple_navigation_goals src/simple_navigation_goals.cpp)
-target_link_libraries(simple_navigation_goals ${catkin_LIBRARIES})
-
-add_executable(agm_worker_node src/agm_worker_node.cpp)
-target_link_libraries(agm_worker_node ${catkin_LIBRARIES})
-
-add_executable(web_comm_server_node src/web_comm_server_node.cpp)
-target_link_libraries(web_comm_server_node ${catkin_LIBRARIES} curl)
-
