@@ -53,5 +53,5 @@ In the examples folder there are examples of robots based upon ROS and simulatio
 
 My project was fortunate to be selected for recognition during my coursework with [Lentin Joesph](https://www.linkedin.com/in/lentinjoseph/).  You can check out his great course and books here: https://robocademy.com/
 
-![image info](./documentation/pictures/4.png)
+![image info](./documentation/pictures/2.png)
 
