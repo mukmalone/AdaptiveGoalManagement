@@ -1,5 +1,11 @@
 # Adaptive Goal Management #
 
+
+My project was fortunate to be selected for recognition during my coursework with [Lentin Joesph](https://www.linkedin.com/in/lentinjoseph/).  You can check out his great course and books here: https://robocademy.com/
+
+![image info](./documentation/pictures/2.png)
+
+
 ### Description ###
 
 This repository is the documentation, examples, issue tracking for a MVP app I created called Adaptive Goal Management.
@@ -50,10 +56,4 @@ In the examples folder there are examples of robots based upon ROS and simulatio
 - Step 6: Activate routings you've created in AGM to sterilize the hospital setting.  You can use the path [creation ubuntu spreadsheet](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/documentation/path_building_v1.ods) to find coordinates of locations in the [hospital map](https://github.com/mukmalone/AdpativeGoalManagement/tree/master/examples/mir_robot/mir_agm/maps)
 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/WQkUFjGvlpc/0.jpg)](https://youtu.be/WQkUFjGvlpc "ROS Hector Mapping using MIR in hospital setting")
-
-### Awards ###
-
-My project was fortunate to be selected for recognition during my coursework with [Lentin Joesph](https://www.linkedin.com/in/lentinjoseph/).  You can check out his great course and books here: https://robocademy.com/
-
-![image info](./documentation/pictures/2.png)
 
