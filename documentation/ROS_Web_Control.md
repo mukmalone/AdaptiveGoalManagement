@@ -1,7 +1,8 @@
 # ROS Worker Control #
 
 The platform includes the ability to control a ROS based robot using a joystick in the browser and navigation by setting goals from a map visualized in the browser.   you will need to setup secure websocket connection certification files on your robot and refer to them in the `rosbridge_server rosbridge_websocket.launch`
-![image info](./pictures/![image info](./documentation/pictures/2.png))
+
+![image info](./pictures/ROS_CONTROL_SCREEN.png)
 
 Here are the the steps to configuring the key files and cert files:
 - openssl genrsa -out server.key 2048
