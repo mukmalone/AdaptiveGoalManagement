@@ -15,7 +15,7 @@ The platform includes the ability to control a ROS based robot using a joystick 
 ### Navigation ###
 You can send goals to your robot by clicking on the map.  This will trigger the robot to navigate to the specified location.
 
-## Setting up Robot side##
+## Setting up Robot ##
 In order for your ROS robot to use this control screen you will need to have the following configured:
 - rosbridge server using secure websocket secure protocol (wss)
 - generate and point websocket launch files to ssl (secure sockets layer) certificate cert and pem files located on your robot
@@ -43,7 +43,7 @@ Below is a list of the key commands.  In a YouTube video I will walk you through
 - `roslaunch agm_robot_pose_publisher rosbridge_websocket_ssl.launch`
 - `rosrun agm_robot_pose_publisher agm_robot_pose_publisher`
 
-## Setting up AGM side ##
+## Setting up AGM ##
 ![image info](./pictures/ROS_CONTROL_SCREEN-SELECTWORKER.png)
 
 Scroll down the screen
