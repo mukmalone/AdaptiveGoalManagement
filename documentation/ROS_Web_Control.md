@@ -44,4 +44,5 @@ Below is a list of the key commands.  In a YouTube video I will walk you through
 - `rosrun agm_robot_pose_publisher agm_robot_pose_publisher`
 
 ## Setting up AGM side ##
-- Go to 
+![image info](./pictures/ROS_CONTROL_SCREEN-SELECTWORKER.png)
+![image info](./pictures/ROS_CONTROL_SCREEN-MODIFY.png)
