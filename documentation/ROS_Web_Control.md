@@ -45,4 +45,7 @@ Below is a list of the key commands.  In a YouTube video I will walk you through
 
 ## Setting up AGM side ##
 ![image info](./pictures/ROS_CONTROL_SCREEN-SELECTWORKER.png)
+
+Scroll down the screen
+
 ![image info](./pictures/ROS_CONTROL_SCREEN-MODIFY.png)
