@@ -33,8 +33,9 @@ Below is a list of the key commands.  In a YouTube video I will walk you through
 > - openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out server.crt
 - install the ros package [rosbridge_suite](http://wiki.ros.org/rosbridge_suite#:~:text=At%20its%20core%2C%20rosbridge%20is,and%20handling%20for%20specific%20datatypes.)
 - configure the file `rosbridge_websocket_ssl.launch` located in `agm_robot_pose_publisher/launch` directory.
-> - line 2: port you will used for websocket
+> - line 2: port you will use for websocket
 > - line 3: ipaddress of the robot
+> - line 4: ssl set to `true`
 > - line 5: location and name of the `.crt` file
 > - line 6: location and name of the `.key` file
 
