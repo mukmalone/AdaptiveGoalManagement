@@ -2,6 +2,9 @@
 
 The platform includes the ability to control a ROS based robot using a joystick in the browser and navigation by setting goals from a map visualized in the browser.  Below is a picture of the screen with a description of the key components.
 
+### Web Controls Introduction ###
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/4XWrP4JeaoY/0.jpg)](https://youtu.be/4XWrP4JeaoY "Web Controls Introduction")
+
 ![image info](./pictures/ROS_CONTROL_SCREEN.png)
 
 - SELECTED ROBOT: You can have multiple robots connected in this platform in your account.  You select the robot you would like to control by clicking on it.
