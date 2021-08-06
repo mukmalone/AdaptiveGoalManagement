@@ -29,6 +29,9 @@ It is free to test and experiment with your robots and create your own fleet of 
 ### Quick start guide ###
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/ex2v6yrXj6A/0.jpg)](https://youtu.be/ex2v6yrXj6A "AGM Quick Start")
 
+### Web Controls Introduction ###
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/4XWrP4JeaoY/0.jpg)](https://youtu.be/4XWrP4JeaoY "Web Controls Introduction")
+
 ### Examples ###
 In the examples folder there are examples of robots based upon ROS and simulations using the application.
 
