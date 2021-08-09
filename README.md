@@ -35,7 +35,7 @@ It is free to test and experiment with your robots and create your own fleet of 
 ### Examples ###
 In the examples folder there are examples of robots based upon ROS and simulations using the application.
 
-#### [MIR Robot in ROS & AGM Fleet Manager Example](https://github.com/mukmalone/AdpativeGoalManagement/tree/master/examples/mir_robot) ####
+#### [Manufacturing: MIR Robot in ROS & AGM Fleet Manager Example](https://github.com/mukmalone/AdpativeGoalManagement/tree/master/examples/mir_robot) ####
 
 - Step 1: Clone this project to your catkin workspace
 - Step 2: Clone https://github.com/mukmalone/agm_msgs to your catkin workspace
@@ -50,7 +50,7 @@ In the examples folder there are examples of robots based upon ROS and simulatio
 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/ErKl_EgNA28/0.jpg)](https://youtu.be/ErKl_EgNA28 "MIR Robot in ROS & Adaptive Goal Management Implementation")
 
-### [MIR Robot in ROS Hospital Sterilization](https://github.com/mukmalone/AdpativeGoalManagement/tree/master/examples/mir_robot/mir_agm/launch) ###
+### [Medical: MIR Robot in ROS Hospital Sterilization](https://github.com/mukmalone/AdpativeGoalManagement/tree/master/examples/mir_robot/mir_agm/launch) ###
 - Step 1: Clone the project to your catkin workspace
 - Step 2: `catkin_make`
 - Step 3: Configure your AGM workspace with one worker (see [Quickstart](https://www.youtube.com/watch?v=ex2v6yrXj6A&feature=youtu.be))
