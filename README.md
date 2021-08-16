@@ -10,7 +10,7 @@ My project was fortunate to be selected for recognition during my coursework wit
 
 This repository is the documentation, examples, issue tracking for a MVP app I created called Adaptive Goal Management.
 
-Adaptive Goal Managment is an app which acts as a robot fleet manager based upon an adaptive goal execution system for robots and drones which are connected to the internet.  
+Adaptive Goal Management is an app which acts as a robot fleet manager based upon an adaptive goal execution system for robots and drones which are connected to the internet.  
 
 There are no limitations as to the number of robots which can be controlled using this system.  It was designed to be a high throughput system and handle hundreds of robots and users.
 
