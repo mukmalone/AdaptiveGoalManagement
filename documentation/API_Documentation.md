@@ -90,6 +90,7 @@ curl:  https://adaptive-goal-management.herokuapp.com/workerLoadWorkstation?name
 - 14003: Error updating the workstation in the database
 - 14004: There is already something in the workstation
 - 14005: Error with logic of loading workstation
+- 14006: Error not enough funds to perform work left in the routing
 
 ### /workerArchiveJob ###
 - 15001: There is a problem with communication check message formatting, normally a worker id problem
