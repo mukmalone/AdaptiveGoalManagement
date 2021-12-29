@@ -13,8 +13,12 @@
 
 ### Worker loads workstation ###
 - No payments if workstation is a buffer
-- If routingBalance si less than deliveryCost return 14006
+- If routingBalance is less than deliveryCost return 14006
 - If there is more than one asset owner return 14007 (See https://github.com/mukmalone/AdvancedGoalManufacturing/issues/146)
 - Send payment from routingAccount with feeBump by networkAccount to workerAowner.records[0].id
 - Store deliveryTransaction in kpv for the step
 - Update actualWorkerCost = actualWorkerCost + deliveryCost
+
+### Workstation completes ###
+- No payments if in auto workstation cycling mode
+- 
