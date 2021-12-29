@@ -91,7 +91,7 @@ curl:  https://adaptive-goal-management.herokuapp.com/workerLoadWorkstation?name
 - 14004: There is already something in the workstation
 - 14005: Error with logic of loading workstation
 - 14006: Error not enough funds to perform work left in the routing
-- 14007: COuld not find worker owner
+- 14007: Could not find worker owner
 - 14008: Error processing payment to worker owner
 
 ### /workerArchiveJob ###
