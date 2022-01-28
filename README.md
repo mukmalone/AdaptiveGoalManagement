@@ -18,7 +18,7 @@ It is free to test and experiment with your robots and create your own fleet of 
 
 ### Where to find the app and documentation ###
 
-- [Adaptive Goal Management Website](https://adaptive-goal-management.herokuapp.com/): This is the website of the app. 
+- [Command-Central](https://adaptive-goal-management.herokuapp.com/): This is the website of the app. 
 - [Documentation describing what it does and how it works](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/documentation/Adaptive%20Goal%20Management-Overview.pdf): This is an overview of how the app works using a manufacturing example.
 - [API documentation](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/documentation/API_Documentation.md): This is the API documentation and the ROS service documentation which connects to the app.
 - [Controlling your ROS robot using the web controls](https://github.com/mukmalone/AdaptiveGoalManagement/blob/master/documentation/ROS_Web_Control.md)
