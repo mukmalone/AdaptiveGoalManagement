@@ -1,0 +1,6 @@
+<launch>
+	<node name="gripper_command" pkg="mycobot_280" type="gripper_topic.py" />
+	<node name="gripper_publish" pkg="mycobot_280" type="gripper_topic_pub.py"/>
+	<!--<node name="real_listener" pkg="mycobot_280" type="listen_real.py" />
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />-->
+</launch>
