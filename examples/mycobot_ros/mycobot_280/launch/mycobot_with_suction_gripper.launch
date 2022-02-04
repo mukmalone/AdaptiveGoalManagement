@@ -1,0 +1,3 @@
+<launch>
+	<node name="suction_gripper_command" pkg="mycobot_280" type="suction_gripper.py" />
+</launch>
