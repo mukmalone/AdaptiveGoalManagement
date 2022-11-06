@@ -43,8 +43,8 @@ curl:  https://adaptive-goal-management.herokuapp.com/workerTakePart?name=your-i
 - ROS Service Request 'function': TAKEPART
 - Description: This curl will acknowledge the worker has retrieved the part from the `source` workstation
 
-### /workerLoadWorkstation ###
-curl:  https://adaptive-goal-management.herokuapp.com/workerLoadWorkstation?name=your-id-name-goes-here
+### /workerLoadPart ###
+curl:  https://adaptive-goal-management.herokuapp.com/workerLoadPart?name=your-id-name-goes-here
 - ROS Service Request 'function': LOADPART
 - Description: This curl will acknowledge the worker has loaded the part into the `destination` workstation
 
