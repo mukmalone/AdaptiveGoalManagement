@@ -49,7 +49,7 @@ curl:  https://adaptive-goal-management.herokuapp.com/workerLoadPart?name=your-i
 - Description: This curl will acknowledge the worker has loaded the part into the `destination` workstation
 
 ### /workerArchiveJob ###
-curl:  https://adaptive-goal-management.herokuapp.com/workerLoadWorkstation?name=your-id-name-goes-here
+curl:  https://adaptive-goal-management.herokuapp.com/workerArchiveJob?name=your-id-name-goes-here
 - ROS Service Request 'function': ARCHIVEJOB
 - Description: This curl will clear the worker job and signal it is ready for the next job (call NEXTJOB)
 
