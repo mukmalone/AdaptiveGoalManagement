@@ -1,7 +1,7 @@
 # API End Points #
 
 ### API Server URL ###
-https://adaptive-goal-management.herokuapp.com
+https://www.command-central.com
 - It is currently in beta and available for free use to open source developers and researchers;
 - There are no currently known limitations as to the number of workers, workstations and routings you can enable and it is designed to handle a high workload.
 
@@ -23,33 +23,33 @@ All endpoints return the same JSON object.  Depending on the request, some field
 `
 
 ### /workerGetNextJob ###
-curl: https://adaptive-goal-management.herokuapp.com/workerGetNextJob?key=your-robot-id-goes-here
+curl: https://www.command-central.com/workerGetNextJob?key=your-robot-id-goes-here
 - ROS Service Request 'function': NEXTJOB
 - Description: This curl will check if there is an available job for the robot corresponding to the robot name.  If there is it will return the source and destination name and coordinates
 
 ### /workerActivateJob ###
-curl:  https://adaptive-goal-management.herokuapp.com/workerActivateJob?name=your-robot-id-goes-here
+curl:  https://www.command-central.com/workerActivateJob?name=your-robot-id-goes-here
 - ROS Service Request 'function': ACTIVATEJOB
 - Description: This curl will acknowledge the job is received and that the robot has started the job
 
 ### /workerLocation ###
-curl:  https://adaptive-goal-management.herokuapp.com/workerLocation?name=your-robot-id-goes-here&location=source-or-desination-goes-here
+curl:  https://www.command-central.com/workerLocation?name=your-robot-id-goes-here&location=source-or-desination-goes-here
 - ROS Service Request 'function': MOVEWORKER
 - Description: This curl will update the location of the worker to be either at the source or destination workstation
 - Implementation: in the `location` field `source` is used to acknowledge worker is at the source workstation, `destination` is used to acknowlegde the worker is at the destination station
 
 ### /workerTakePart ###
-curl:  https://adaptive-goal-management.herokuapp.com/workerTakePart?name=your-id-name-goes-here
+curl:  https://www.command-central.com/workerTakePart?name=your-id-name-goes-here
 - ROS Service Request 'function': TAKEPART
 - Description: This curl will acknowledge the worker has retrieved the part from the `source` workstation
 
 ### /workerLoadPart ###
-curl:  https://adaptive-goal-management.herokuapp.com/workerLoadPart?name=your-id-name-goes-here
+curl:  https://www.command-central.com/workerLoadPart?name=your-id-name-goes-here
 - ROS Service Request 'function': LOADPART
 - Description: This curl will acknowledge the worker has loaded the part into the `destination` workstation
 
 ### /workerArchiveJob ###
-curl:  https://adaptive-goal-management.herokuapp.com/workerArchiveJob?name=your-id-name-goes-here
+curl:  https://www.command-central.com/workerArchiveJob?name=your-id-name-goes-here
 - ROS Service Request 'function': ARCHIVEJOB
 - Description: This curl will clear the worker job and signal it is ready for the next job (call NEXTJOB)
 
