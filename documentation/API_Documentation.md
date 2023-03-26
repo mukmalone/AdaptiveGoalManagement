@@ -100,6 +100,12 @@ curl:  https://www.command-central.com/workerArchiveJob?name=your-id-name-goes-h
 - 15003: The worker needs a job to be activated and complete before archiving
 - 15004: The worker still has a job and needs to complete before archiving
 
+### /workerRunTimeStatus ###
+- 16001: Worker does not exist
+- 16002: RunTime parameter is missing
+- 16003: GridLocation parameter is missing
+- 16004: General error updating run time status
+
 ## ROS Custom Service Documentation ##
 The ROS service which implements the endpoints in ROS has the following server definition:
 - name: [WebComm.srv](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/examples/mir_robot/mir_agm/srv/WebComm.srv)
