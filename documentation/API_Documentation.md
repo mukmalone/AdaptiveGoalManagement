@@ -105,6 +105,7 @@ curl:  https://www.command-central.com/workerArchiveJob?name=your-id-name-goes-h
 - 16002: RunTime parameter is missing
 - 16003: GridLocation parameter is missing
 - 16004: General error updating run time status
+- 16005: There is a problem with communication check message formatting
 
 ## ROS Custom Service Documentation ##
 The ROS service which implements the endpoints in ROS has the following server definition:
