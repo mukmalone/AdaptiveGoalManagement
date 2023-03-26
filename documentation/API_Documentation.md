@@ -53,6 +53,24 @@ curl:  https://www.command-central.com/workerArchiveJob?name=your-id-name-goes-h
 - ROS Service Request 'function': ARCHIVEJOB
 - Description: This curl will clear the worker job and signal it is ready for the next job (call NEXTJOB)
 
+### /workerRunTimeStatus ###
+curl:  https://www.command-central.com/workerRunTimeStatus?key=your-robot-id-goes-here&&runTimeStatus=run-time-object
+- Example of run-time-object you send as a string 
+- Note: any missing parameters will result in an error
+- `{ 
+            runTimeStatus: 'MOVING',
+            gridLocation: {
+            posX: 1,
+            posY: 2,
+            posZ: 3,
+            orientX: 4,
+            orientY: 5,
+            orientZ: 6,
+            orientW: 7
+        }, 
+        batteryLife: 99,
+        timeToChargeSeconds: 98
+    }`
 
 # API Error Codes #
 
