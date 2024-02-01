@@ -8,7 +8,7 @@ My project was fortunate to be selected for recognition during my coursework wit
 
 ### Description ###
 
-This repository is the documentation, examples, issue tracking for a MVP app I created called Adaptive Goal Management.
+This repository is the documentation, examples, issue tracking for a MVP app I created called Adaptive Goal Management or Command-Central.
 
 Adaptive Goal Management is an app which acts as a robot fleet manager based upon an adaptive goal execution system for robots and drones which are connected to the internet.  
 
@@ -18,7 +18,8 @@ It is free to test and experiment with your robots and create your own fleet of 
 
 ### Where to find the app and documentation ###
 
-- [Command-Central](https://adaptive-goal-management.herokuapp.com/): This is the website of the app. 
+- [Command-Central](https://adaptive-goal-management.herokuapp.com/): This is the website of the app.
+- [Command Robotics](https://www.commandrobotics.ai/): This is the website outlining the high-level roadmap and how to contact me.
 - [Documentation describing what it does and how it works](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/documentation/Adaptive%20Goal%20Management-Overview.pdf): This is an overview of how the app works using a manufacturing example.
 - [API documentation](https://github.com/mukmalone/AdpativeGoalManagement/blob/master/documentation/API_Documentation.md): This is the API documentation and the ROS service documentation which connects to the app.
 - [Controlling your ROS robot using the web controls](https://github.com/mukmalone/AdaptiveGoalManagement/blob/master/documentation/ROS_Web_Control.md)
