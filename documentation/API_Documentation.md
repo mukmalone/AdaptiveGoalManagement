@@ -83,8 +83,8 @@ curl:  https://www.command-central.com/workerRunTimeStatus?key=your-robot-id-goe
 - 10004: Worker already has a job in progress
 - 10005: Worker does not exist
 - 10006: Query is locked by another process
-- 10007: Missing or issue with worker key
-- 10008: Missing or issue with owner key
+- 10007: Missing worker key
+- 10008: Missing owner key
 
 ### /workerActivateJob ###
 - 11001: There is a problem with communication check message formatting, normally a worker id problem
