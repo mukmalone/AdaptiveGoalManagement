@@ -85,6 +85,7 @@ curl:  https://www.command-central.com/workerRunTimeStatus?key=your-robot-id-goe
 - 10006: Query is locked by another process
 - 10007: Missing worker key
 - 10008: Missing owner key
+- 10009: Process timeout try again soon
 
 ### /workerActivateJob ###
 - 11001: There is a problem with communication check message formatting, normally a worker id problem
