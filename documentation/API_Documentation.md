@@ -23,7 +23,7 @@ All endpoints return the same JSON object.  Depending on the request, some field
 `
 
 ### /workerGetNextJob ###
-curl: https://www.command-central.com/workerGetNextJob?key=your-robot-id-goes-here
+curl: https://www.command-central.com/workerGetNextJob?key=your-robot-id-goes-here&owner=your-user-id-goes-here
 - ROS Service Request 'function': NEXTJOB
 - Description: This curl will check if there is an available job for the robot corresponding to the robot name.  If there is it will return the source and destination name and coordinates
 
@@ -71,6 +71,20 @@ curl:  https://www.command-central.com/workerRunTimeStatus?key=your-robot-id-goe
         batteryLife: 99,
         timeToChargeSeconds: 98
     }`
+
+### /workstationGetStatus ###
+curl: https://www.command-central.com/workstationGetStatus?key=your-workstation-id-goes-here&owner=your-user-id-goes-here
+- ROS Service Request 'function': WORKSTATIONSTATUS
+- Description: This curl will check the workstation status and it will report back the job and tools used to run the workstation if active along with the coordinates of the workstation as the source
+
+### /setWorkstationComplete ###
+curl: https://www.command-central.com/setWorkstationComplete?key=your-workstation-id-goes-here&owner=your-user-id-goes-here
+- ROS Service Request 'function': WORKSTATIONCOMPLETE
+- Description: This curl will set the status to completed with the status specified.  You must include the following parameters in the body of the curl:
+  `         name: workstation name,
+            poNum: PO Number,
+            stationStatus: new station status,
+            stepStatus: step status`
 
 # API Error Codes #
 
@@ -128,6 +142,13 @@ curl:  https://www.command-central.com/workerRunTimeStatus?key=your-robot-id-goe
 - 16003: GridLocation parameter is missing
 - 16004: General error updating run time status
 - 16005: There is a problem with communication check message formatting
+
+### /workstationGetStatus ###
+- 17001: There is a problem with communication check message formatting, normally a worker id problem
+- 17005: Workstation does not exist
+- 17006: Query is locked by another process
+- 17007: Missing workstation key
+- 17008: Missing owner key
 
 ## ROS Custom Service Documentation ##
 The ROS service which implements the endpoints in ROS has the following server definition:
