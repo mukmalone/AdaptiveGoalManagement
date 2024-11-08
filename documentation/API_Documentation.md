@@ -78,13 +78,9 @@ curl: https://www.command-central.com/workstationGetStatus?key=your-workstation-
 - Description: This curl will check the workstation status and it will report back the job and tools used to run the workstation if active along with the coordinates of the workstation as the source
 
 ### /setWorkstationComplete ###
-curl: https://www.command-central.com/setWorkstationComplete?key=your-workstation-id-goes-here&owner=your-user-id-goes-here
+curl: https://www.command-central.com/setWorkstationComplete?key=your-workstation-id-goes-here&owner=your-user-id-goes-here&poNum=po-num-goes-here&stationStatus=station-status-here&stepStatus=step-status-here
 - ROS Service Request 'function': WORKSTATIONCOMPLETE
-- Description: This curl will set the status to completed with the status specified.  You must include the following parameters in the body of the curl:
-  `         name: workstation name,
-            poNum: PO Number,
-            stationStatus: new station status,
-            stepStatus: step status`
+- Description: This curl will set the status to completed with the status specified.  
 
 # API Error Codes #
 
@@ -149,6 +145,15 @@ curl: https://www.command-central.com/setWorkstationComplete?key=your-workstatio
 - 17006: Query is locked by another process
 - 17007: Missing workstation key
 - 17008: Missing owner key
+
+### /setWorkstationComplete ###
+- 18001: There is a problem with communication check message formatting, normally a worker id problem
+- 18002: Workstation does not exist
+- 18004: Missing key
+- 19005: Missing owner
+- 19006: Missing poNum
+- 19007: Missing station status
+- 19008: Missing step status
 
 ## ROS Custom Service Documentation ##
 The ROS service which implements the endpoints in ROS has the following server definition:
