@@ -28,23 +28,23 @@ curl: https://www.command-central.com/workerGetNextJob?key=your-robot-id-goes-he
 - Description: This curl will check if there is an available job for the robot corresponding to the robot name.  If there is it will return the source and destination name and coordinates
 
 ### /workerActivateJob ###
-curl:  https://www.command-central.com/workerActivateJob?name=your-robot-id-goes-here
+curl:  https://www.command-central.com/workerActivateJob?key=your-robot-id-goes-here
 - ROS Service Request 'function': ACTIVATEJOB
 - Description: This curl will acknowledge the job is received and that the robot has started the job
 
 ### /workerLocation ###
-curl:  https://www.command-central.com/workerLocation?name=your-robot-id-goes-here&location=source-or-desination-goes-here
+curl:  https://www.command-central.com/workerLocation?key=your-robot-id-goes-here&location=source-or-desination-goes-here
 - ROS Service Request 'function': MOVEWORKER
 - Description: This curl will update the location of the worker to be either at the source or destination workstation
 - Implementation: in the `location` field `source` is used to acknowledge worker is at the source workstation, `destination` is used to acknowlegde the worker is at the destination station
 
 ### /workerTakePart ###
-curl:  https://www.command-central.com/workerTakePart?name=your-id-name-goes-here
+curl:  https://www.command-central.com/workerTakePart?key=your-robot-id-goes-here
 - ROS Service Request 'function': TAKEPART
 - Description: This curl will acknowledge the worker has retrieved the part from the `source` workstation
 
 ### /workerLoadPart ###
-curl:  https://www.command-central.com/workerLoadPart?name=your-id-name-goes-here
+curl:  https://www.command-central.com/workerLoadPart?key=your-robot-id-goes-here
 - ROS Service Request 'function': LOADPART
 - Description: This curl will acknowledge the worker has loaded the part into the `destination` workstation
 
